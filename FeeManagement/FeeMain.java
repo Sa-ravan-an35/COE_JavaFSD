@@ -53,33 +53,33 @@ public class FeeMain {
                 sc.nextLine();
 
                 try {
-					switch (choice) {
-					    case 1:
-					        System.out.print("Enter Name: ");
-					        String name = sc.nextLine();
-					        System.out.print("Enter Email: ");
-					        String email = sc.nextLine();
-					        System.out.print("Enter Phone: ");
-					        String phone = sc.nextLine();
-					        System.out.print("Enter Password: ");
-					        String pass = sc.nextLine();
-						try {
-							Admin.addAccountant(name, email, phone, pass);
-						} catch (SQLException e) {
-							e.printStackTrace();
-						}
-					        break;
-					    case 2:
-					        Admin.viewAccountants();
-					        break;
-					    case 3:
-					        return;
-					    default:
-					        System.out.println("Invalid choice! Try again.");
-					}
+			switch (choice) {
+			case 1:
+				System.out.print("Enter Name: ");
+			        String name = sc.nextLine();
+			        System.out.print("Enter Email: ");
+				String email = sc.nextLine();
+			        System.out.print("Enter Phone: ");
+			        String phone = sc.nextLine();
+				System.out.print("Enter Password: ");
+			        String pass = sc.nextLine();
+				try {
+					Admin.addAccountant(name, email, phone, pass);
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
+				break;
+			 case 2:
+				Admin.viewAccountants();
+			        break;
+			 case 3:
+				return;
+			default:
+				System.out.println("Invalid choice! Try again.");
+			}
+		  } catch (SQLException e) {
+			e.printStackTrace();
+		}			
             }
         } else {
             System.out.println("Invalid credentials!");
