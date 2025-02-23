@@ -1,0 +1,148 @@
+/* Dark Mode Theme */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Timeline Section */
+.timeline-section {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #00e5ff, #0078ff);
+  transform: translateX(-50%);
+}
+
+/* Timeline Event */
+.timeline-event {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.timeline-event:hover {
+  box-shadow: 0 4px 10px #ffcc00;
+}
+
+/* Left and Right Alignment */
+.timeline-event:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-event:nth-child(even) {
+  left: 55%;
+  text-align: left;
+}
+
+.timeline-event::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #00e5ff;
+  border-radius: 50%;
+  border: 3px solid #0078ff;
+  transform: translateY(-50%);
+}
+
+.timeline-event:nth-child(odd)::after {
+  right: -30px;
+}
+
+.timeline-event:nth-child(even)::after {
+  left: -30px;
+}
+
+/* Content Styling */
+.timeline-content {
+  padding: 15px;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.event-description {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.know-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #0078ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.know-more:hover {
+  background: #00e5ff;
+  color: #121212;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin-left: 10px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-event {
+    width: 90%;
+    left: 0 !important;
+    text-align: left !important;
+    margin: 20px 0;
+    margin-left: 10px;
+  }
+
+  .timeline-event::after {
+    left: -20px !important;
+  }
+}

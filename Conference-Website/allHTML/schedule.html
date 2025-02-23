@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule - InnovateX 2025</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/schedule.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">InnovateX</div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html" class="active">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <ul class="mobile-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html" class="active">Schedule</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <h1 class="section-title">Event Schedule</h1>
+      <div class="timeline">
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h2 class="event-title">AI & Machine Learning Summit</h2>
+            <h3 class="event-date">March 10, 2025</h3>
+            <p class="event-description">
+              Discover the latest trends in artificial intelligence and how they
+              are shaping the future of industries worldwide.
+            </p>
+            <a href="#" class="know-more">Know More</a>
+          </div>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h2 class="event-title">Blockchain & Web3 Innovations</h2>
+            <h3 class="event-date">March 11, 2025</h3>
+            <p class="event-description">
+              A deep dive into decentralized applications, smart contracts, and
+              the future of blockchain in various industries.
+            </p>
+            <a href="#" class="know-more">Know More</a>
+          </div>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h2 class="event-title">Cybersecurity & Data Privacy</h2>
+            <h3 class="event-date">March 12, 2025</h3>
+            <p class="event-description">
+              Experts discuss the latest advancements in cybersecurity and how
+              to safeguard digital assets in an evolving cyber landscape.
+            </p>
+            <a href="#" class="know-more">Know More</a>
+          </div>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h2 class="event-title">Startup & Investor Networking</h2>
+            <h3 class="event-date">March 13, 2025</h3>
+            <p class="event-description">
+              Connect with investors, entrepreneurs, and innovators to build
+              strong collaborations and take startups to the next level.
+            </p>
+            <a href="#" class="know-more">Know More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show");
+        document.getElementById("overlay").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

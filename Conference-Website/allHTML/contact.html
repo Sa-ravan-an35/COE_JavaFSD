@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - InnovateX 2025</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">InnovateX</div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <ul class="mobile-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h1 class="section-title">Get In Touch</h1>
+      <p class="contact-subtitle">
+        We’d love to hear from you! Fill in the form below.
+      </p>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required />
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <span class="error-message"></span>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p id="formStatus"></p>
+      </form>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show");
+        document.getElementById("overlay").classList.toggle("show");
+      }
+    </script>
+    <script src="./assets/js/contact.js"></script>
+  </body>
+</html>

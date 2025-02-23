@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnovateX 2025</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">InnovateX</div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <ul class="mobile-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero section -->
+    <div class="hero-section">
+      <h1 class="hero-title">InnovateX - 2025</h1>
+      <p class="hero-description">
+        The InnovateX Tech Conference Website is a modern, interactive, and
+        fully responsive platform designed to showcase one of the most
+        anticipated annual tech conferences. Built with cutting-edge web
+        technologies, this website ensures a seamless user experience across all
+        devices while offering dynamic content, smooth navigation, and engaging
+        animations.
+      </p>
+      <div id="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+    </div>
+
+    <section class="conference-section">
+      <h2 class="conference-title">Upcoming Conferences</h2>
+      <p class="conference-description">
+        Stay ahead with insights from industry leaders. Join our exclusive
+        conferences!
+      </p>
+
+      <!-- Conference section  -->
+
+      <div class="conference-container">
+        <div class="conference-card">
+          <h3>AI & Innovation</h3>
+          <p>
+            Explore the future of artificial intelligence and its real-world
+            applications.
+          </p>
+          <button class="register-btn">Register Now</button>
+        </div>
+
+        <div class="conference-card">
+          <h3>Web Technologies</h3>
+          <p>
+            Deep dive into the latest trends in web development and UI/UX
+            design.
+          </p>
+          <button class="register-btn">Register Now</button>
+        </div>
+
+        <div class="conference-card">
+          <h3>Cybersecurity Trends</h3>
+          <p>
+            Learn about the latest security threats and how to stay protected.
+          </p>
+          <button class="register-btn">Register Now</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/countdown.js"></script>
+  </body>
+</html>

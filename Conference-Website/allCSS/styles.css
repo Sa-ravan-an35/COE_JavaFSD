@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.nav-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ffcc00;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(200, 200, 200, 0.3);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  z-index: 10001;
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-btn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Mobile Links */
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-links li {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slide-in 0.5s forwards;
+}
+
+.mobile-links a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.mobile-links a:hover,.mobile-links a.active {
+  color: #ff6600;
+}
+
+/* Animation */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Delay animations for each menu item */
+.mobile-menu.show .mobile-links li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.mobile-menu.show .mobile-links li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.mobile-menu.show .mobile-links li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.mobile-menu.show .mobile-links li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: #000;
+}
+
+.hero-title,
+.nav-left {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-left {
+  font-size: 20px;
+  text-transform: unset;
+}
+
+.hero-description {
+  font-size: 20px;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Countdown Timer */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  min-width: 80px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.time-box span {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.time-box small {
+  font-size: 14px;
+  color: white;
+}
+
+/* Evenst section */
+/* Conference Section */
+.conference-section {
+  padding: 60px 20px;
+  background: #111; /* Dark background */
+  text-align: center;
+}
+
+.conference-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.conference-description {
+  font-size: 18px;
+  color: #bbb;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Conference Cards */
+.conference-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.conference-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conference-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.conference-card h3 {
+  font-size: 22px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.conference-card p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Register Button */
+.register-btn {
+  background: #ff6600;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #cc5500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conference-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  .toggle-btn {
+    display: block;
+  }
+
+  .hero-section {
+    height: unset;
+    min-height: calc(100dvh - 60px);
+    margin-top: 60px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  #countdown {
+    font-size: 18px;
+    /* flex-direction: column; */
+  }
+}
+
+@media (max-width: 550px) {
+  #countdown {
+    flex-wrap: wrap;
+  }
+}
