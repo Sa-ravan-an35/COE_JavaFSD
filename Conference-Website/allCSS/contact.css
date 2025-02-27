@@ -9,7 +9,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-  max-width: 600px;
+  max-width: 800px; /* Increased width for grid layout */
   margin: 50px auto;
   text-align: center;
   padding: 20px;
@@ -20,6 +20,8 @@ body {
   font-weight: bold;
   color: #00e5ff;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 .contact-subtitle {
@@ -31,25 +33,36 @@ body {
 /* Form Styling */
 form {
   background: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Grid Layout for Form Fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
   position: relative;
+}
+
+.form-group.full-width {
+  grid-column: span 2; /* Full width for textarea */
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #00e5ff;
   background: #121212;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
@@ -62,35 +75,39 @@ textarea:focus {
 /* Error Message */
 .error-message {
   position: absolute;
-  bottom: -18px;
+  bottom: -20px;
   left: 10px;
   font-size: 0.9rem;
-  color: red;
+  color: #ff4757;
   visibility: hidden;
 }
 
 /* Submit Button */
 .submit-btn {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   font-size: 1rem;
   background: #0078ff;
   color: white;
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .submit-btn:hover {
   background: #00e5ff;
   color: #121212;
+  transform: translateY(-2px);
 }
 
 /* Form Status */
 #formStatus {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 1rem;
+  color: #bbb;
 }
 
 /* Responsive */
@@ -98,4 +115,20 @@ textarea:focus {
   .contact-section {
     max-width: 90%;
   }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .form-group.full-width {
+    grid-column: span 1; /* Reset full width for smaller screens */
+  }
+}
+
+  #image {
+    width:30px;
+    height:25px;
+    border-radius: 30%;
+    margin-right: 5px;
+    margin-left: 90px;
 }
