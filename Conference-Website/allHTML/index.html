@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InnovateX 2025</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="nav-left">InnovateX</div>
-      <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
-      </div>
-    </nav>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnovateX 2025</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="close-btn" onclick="toggleMenu()">×</button>
-      <ul class="mobile-links">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="speakers.html">Speakers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Hero section -->
-    <div class="hero-section">
-      <h1 class="hero-title">InnovateX - 2025</h1>
-      <p class="hero-description">
-        The InnovateX Tech Conference Website is a modern, interactive, and
-        fully responsive platform designed to showcase one of the most
-        anticipated annual tech conferences. Built with cutting-edge web
-        technologies, this website ensures a seamless user experience across all
-        devices while offering dynamic content, smooth navigation, and engaging
-        animations.
-      </p>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
       <div id="countdown">
         <div class="time-box">
           <span id="days">00</span>
-          <small>Days</small>
+          <small>D</small>
         </div>
         <div class="time-box">
           <span id="hours">00</span>
-          <small>Hours</small>
+          <small>H</small>
         </div>
         <div class="time-box">
           <span id="minutes">00</span>
-          <small>Minutes</small>
+          <small>M</small>
         </div>
         <div class="time-box">
           <span id="seconds">00</span>
-          <small>Seconds</small>
+          <small>S</small>
         </div>
       </div>
     </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <ul class="mobile-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="speakers.html">Speakers</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero section -->
+  <div class="hero-section">
+    <h1 class="hero-title">InnovateX Conference</h1>
+    <p class="hero-description">
+      The InnovateX Tech Conference Website is a sleek, interactive,
+      and fully responsive platform designed to highlight one of the most
+      anticipated annual tech events. Built with cutting-edge web technologies,
+      it delivers a seamless user experience across all devices, featuring dynamic
+      content, smooth navigation, and captivating animations..
+    </p>
 
     <section class="conference-section">
-      <h2 class="conference-title">Upcoming Conferences</h2>
+      <h2 class="conference-title">Conferences To Be Conduct</h2>
       <p class="conference-description">
-        Stay ahead with insights from industry leaders. Join our exclusive
+        Stay ahead with insights from industry leaders. Join on our exclusive
         conferences!
       </p>
 
@@ -79,27 +80,46 @@
 
       <div class="conference-container">
         <div class="conference-card">
-          <h3>AI & Innovation</h3>
+          <h3>Web & App Development</h3>
           <p>
-            Explore the future of artificial intelligence and its real-world
-            applications.
+            Discover the latest trends in web development and how they
+            are shaping the future of tech industries worldwide..
           </p>
           <button class="register-btn">Register Now</button>
         </div>
 
         <div class="conference-card">
-          <h3>Web Technologies</h3>
+          <h3>Machine Learning</h3>
           <p>
-            Deep dive into the latest trends in web development and UI/UX
-            design.
+            A deep dive into decentralized applications, smart contracts, and
+            the future of robotics in various industries.
           </p>
           <button class="register-btn">Register Now</button>
         </div>
 
         <div class="conference-card">
-          <h3>Cybersecurity Trends</h3>
+          <h3>Blockchain Technologies</h3>
           <p>
-            Learn about the latest security threats and how to stay protected.
+            Experts discuss the latest advancements in Blockchain and how
+            to safeguard digital assets in an evolving blockchain landscape.
+          </p>
+          <button class="register-btn">Register Now</button>
+        </div>
+
+        <div class="conference-card">
+          <h3>AI Technologies</h3>
+          <p>
+            Discover the latest trends in artificial intelligence and how they
+            are shaping the future of industries worldwide.
+          </p>
+          <button class="register-btn">Register Now</button>
+        </div>
+
+        <div class="conference-card">
+          <h3>Future of Software Development</h3>
+          <p>
+            A deep dive into software development, building applications,
+            and the future of wed animations.
           </p>
           <button class="register-btn">Register Now</button>
         </div>
@@ -108,5 +128,6 @@
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/countdown.js"></script>
-  </body>
+</body>
+
 </html>
